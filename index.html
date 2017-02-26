@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oncontextmenu(自定义右键菜单)</title>
+    <style>
+        .main{
+            width: 300px;
+            height: 600px;
+        background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" contextmenu="mymenu">
+        <menu type="context" id="mymenu">
+            <menuitem label="菜单一" onclick="alert('您点击了：'+this.label)"> </menuitem>
+            <menuitem label="菜单二" onclick="alert('您点击了：'+this.label)"> </menuitem>
+            <menu label="菜单三">
+                <menuitem label="子菜单一" onclick="alert('您点击了菜单三中的：'+this.label)"></menuitem>
+                <menuitem label="子菜单二" onclick="alert('您点击了菜单三中的：'+this.label)"></menuitem>
+            </menu>
+        </menu>
+    </div>
+</body>
+</html>
